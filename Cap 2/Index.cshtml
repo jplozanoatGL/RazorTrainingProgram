@@ -1,0 +1,22 @@
+@page
+@model IndexModel
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Posts</title>
+</head>
+<body>
+    <h1>Blog Posts</h1>
+    <ul>
+        @foreach (var post in Model.BlogPosts)
+        {
+            <li>
+                <h2>@post.Title</h2>
+                <p>@post.Content</p>
+                <p><small>@post.CreatedAt.ToShortDateString()</small></p>
+                <p><small>@post.Author</small></p>
+            </li>
+        }
+    </ul>
+</body>
+</html>
