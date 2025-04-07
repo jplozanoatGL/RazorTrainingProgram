@@ -1,0 +1,23 @@
+@page "/reports"
+@model ReportModel
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Reports</title>
+</head>
+<body>
+    <h1>Weather Reports</h1>
+    <ul>
+        <!-- TODO: Loop through WeatherReports and display the city, condition, temperature, and report date -->
+         @foreach (var report in Model.WeatherReports)
+        {
+            <li>
+                <h2>@report.City</h2>
+                <p>@report.Condition</p>
+                <p>@report.Temperature</p>
+                <p><small>@report.ReportDate.ToShortDateString()</small></p>
+            </li>
+        }
+    </ul>
+</body>
+</html>

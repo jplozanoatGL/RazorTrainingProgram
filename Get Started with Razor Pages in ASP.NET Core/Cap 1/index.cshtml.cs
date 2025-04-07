@@ -7,5 +7,6 @@ public class IndexModel : PageModel
     public void OnGet()
     {
         // TODO: Change the message to "Tech Enthusiast"
+        Message = "Tech Enthusiast";
     }
 }
