@@ -1,0 +1,23 @@
+@page
+@model ContactModel
+<form method="post">
+    <label asp-for="ContactName">ContactName: </label>
+    <input asp-for="ContactName" name="ContactName" />
+    <span asp-validation-for="ContactName" class="text-danger"></span>
+
+    <label asp-for="PhoneNumber">PhoneNumber: </label>
+    <input asp-for="PhoneNumber" name="PhoneNumber"/>
+    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    
+    <button type="submit">Submit</button>
+</form>
+
+@if (Model.SubmissionSuccessful)
+{
+    <p>Contact submission successful! Name: @Model.ContactName</p>
+    <p>Phone number: @Model.PhoneNumber</p>
+}
+else if (Model.SubmissionAttempted && !Model.SubmissionSuccessful)
+{
+    <p class="text-danger">Submission failed. Please correct the errors and try again.</p>
+}

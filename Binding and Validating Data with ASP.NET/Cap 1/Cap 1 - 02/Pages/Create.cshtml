@@ -1,0 +1,14 @@
+@page
+@model CreateModel
+<form method="post">
+    <div>
+        <label asp-for="Name">Name: </label>
+        <input asp-for="Name"  name="Name"/>
+    </div>
+    <!-- TODO: Add a form field for Superpower similar to Name -->
+    </div>
+        <label asp-for="Superpower">Superpower : </label>
+        <input asp-for="Superpower"  name="Superpower"/>
+    </div>
+    <button type="submit">Create</button>
+</form>

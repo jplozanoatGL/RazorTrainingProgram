@@ -1,0 +1,37 @@
+# Ignore bin and obj folders
+**/bin/
+**/obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build results
+*.dll
+*.exe
+*.app
+*.log
+
+# Ignore Rider IDE files
+.idea/
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore packages folder (if not using PackageReference)
+packages/
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.bak
+
+# Ignore Recycle Bin folder
+$RECYCLE.BIN/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,28 @@
+@page "{id:int}"
+@model EditModel
+<form method="post">
+    <div>
+    <label asp-for="BookData.Title">Title</label>
+    <input asp-for="BookData.Title" name="BookData.Title" />
+    </div>
+    <div>
+    <label asp-for="BookData.Author">Author</label>
+    <input asp-for="BookData.Author" name="BookData.Author" />
+    </div>
+    <div></div>
+    <label asp-for="BookData.Price">Price</label>
+    <input asp-for="BookData.Price" name="BookData.Price" />
+    </div>
+
+    <button type="submit">Save</button>
+</form>
+
+@if (Model.BookData != null)
+{
+    <div>
+        <h2>Updated Book Details:</h2>
+        <p><strong>Title:</strong> @Model.BookData.Title</p>
+        <p><strong>Author:</strong> @Model.BookData.Author</p>
+        <p><strong>Price:</strong> @Model.BookData.Price</p>
+    </div>
+}

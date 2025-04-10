@@ -1,0 +1,27 @@
+@page "{id:int}"
+@model EditModel
+<form method="post">
+    <label asp-for="Product.ProductName">Product Name: </label>
+    <input asp-for="Product.ProductName" name="Product.ProductName" />
+    <br/>
+
+    <label asp-for="Product.Description">Description: </label>
+    <input asp-for="Product.Description" name="Product.Description" />
+    <br/>
+
+    <label asp-for="Product.Price">Price: </label>
+    <input asp-for="Product.Price" name="Product.Price" />
+    <br/>
+
+    <button type="submit">Save</button>
+</form>
+
+@if (Model.Product != null)
+{
+    <div>
+        <h2>Updated Product Details:</h2>
+        <p><strong>Name:</strong> @Model.Product.ProductName</p>
+        <p><strong>Description:</strong> @Model.Product.Description</p>
+        <p><strong>Price:</strong> @Model.Product.Price</p>
+    </div>
+}

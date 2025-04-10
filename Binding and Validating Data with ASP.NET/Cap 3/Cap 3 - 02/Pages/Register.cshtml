@@ -1,0 +1,24 @@
+@page
+@model RegisterModel
+<form method="post">
+    <div>
+        <label asp-for="Email">Email: </label>
+        <input asp-for="Email" name="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Phone">Phone: </label>
+        <input asp-for="Phone" name="Phone" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <button type="submit">Register</button>
+</form>
+
+@if (Model.RegistrationSuccessful)
+{
+    <p>Registration successful! Your email: @Model.Email</p>
+}
+else if (Model.RegistrationAttempted && !Model.RegistrationSuccessful)
+{
+    <p class="text-danger">Registration failed. Please correct the errors and try again.</p>
+}

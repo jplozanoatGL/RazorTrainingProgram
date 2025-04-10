@@ -1,0 +1,25 @@
+@page "{id:int}"
+@model EditModel
+<form method="post">
+    <label asp-for="Title"></label>
+    <input asp-for="BookData.Title" name="Title" />
+
+    <label asp-for="Synopsis"></label>
+    <input asp-for="BookData.Synopsis" name="Synopsis" />
+
+    <label asp-for="Price"></label>
+    <input asp-for="BookData.Price" name="Price" />
+
+    <button type="submit">Update</button>
+</form>
+
+@if (Model.BookData != null)
+{
+    <div>
+        <h2>Updated Book Details:</h2>
+        <!-- TODO: Display updated book details -->
+        <p><strong>Title:</strong> @Model.BookData.Title</p>
+        <p><strong>Synopsis:</strong> @Model.BookData.Synopsis</p>
+        <p><strong>Price:</strong> @Model.BookData.Price</p>
+    </div>
+}

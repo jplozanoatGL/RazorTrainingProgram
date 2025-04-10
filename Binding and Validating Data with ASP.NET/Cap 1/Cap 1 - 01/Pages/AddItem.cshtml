@@ -1,0 +1,9 @@
+@page
+@model AddItemModel
+<form method="post">
+    <div>
+        <label asp-for="ItemName"></label>
+        <input asp-for="ItemName" name="ItemName" />
+    </div>
+    <button type="submit">Add Item</button>
+</form>
